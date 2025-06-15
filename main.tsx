@@ -15,7 +15,7 @@ app.get('/', (c) => {
         <div id='now-time'></div>
         {html`
           <script>
-            const ws = new WebSocket(wss://deno-deploy-ws-test.deno.dev/ws');
+            const ws = new WebSocket('wss://deno-deploy-ws-test.deno.dev/ws');
             const $nowTime = document.getElementById('now-time');
             ws.onmessage = (event) => {
               $nowTime.textContent = event.data;
